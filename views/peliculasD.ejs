@@ -1,12 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <p>Detalle de las peliculas</p>
+
+    <h1>Detalles de la Película</h1>
+
+    <div>
+        <div>
+          <span>ID:</span>
+          <span><%= movie.id %></span>
+        </div>
+        <div>
+          <span>Título:</span>
+          <span><%= movie.title %></span>
+        </div>
+        <div>
+          <span>Premios:</span>
+          <span><%= movie.awards %></span>
+        </div>
+        <div>
+          <span>Puntaje:</span>
+          <span><%= movie.rating %></span>
+        </div>
+        <div>
+          <span>Fecha de Estreno:</span>
+          <span><%= movie.release_date %></span>
+        </div>
+        <div>
+          <span>Duración:</span>
+          <span><%= movie.length ? movie.length : 0 %></span>
+        </div>
+        <div>
+          <span>Género:</span>
+          <span><%= movie.genre?.name %></span>
+        </div>
+      </div>
 </body>
+
 </html>

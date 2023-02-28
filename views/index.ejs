@@ -5,21 +5,18 @@
     <title>Listado de películas</title>
   </head>
   <body>
-    <h1>Listado de películas</h1>
     <table>
       <thead>
         <tr>
-          <th>ID</th>
-          <th>Título</th>
-          <th>Premios</th>
+          <th>
+            <h1>Listado de películas</h1>
+          </th>
         </tr>
       </thead>
       <tbody>
         <% movies.forEach(function(movie) { %>
           <tr>
-            <td><%= movie.id %></td>
             <td><a href="/peliculasD/<%= movie.id %>"><%= movie.title %></a></td>
-            <td><%= movie.awards %></td>
           </tr>
         <% }); %>
       </tbody>
