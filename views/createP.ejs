@@ -1,33 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <div>
-        <h1>Creacion de peliculas</h1>
+        <h1>Creación de películas</h1>
     </div>
-    <form action="/" method="POST">
+    <form action="/createP/" method="POST">
         <div>
-            <input id="titulo" type="text" placeholder="Titulo">
+            <input id="title" name="title" type="text" placeholder="Título">
         </div>
         <div>
-            <div>
-                <input id="genero" type="text" placeholder="Genero">
-            </div>
+            <input id="rating" name="rating" type="number" placeholder="Puntaje" min="1" max="10">
         </div>
         <div>
-            <input id="raiting" type="number" placeholder="Raiting" min="1" max="10">
+            <input id="length" name="length" type="number" placeholder="Duración">
         </div>
         <div>
-            <input id="actores" type="text" placeholder="Actores">
+            <input id="awards" name="awards" type="text" placeholder="Premios">
         </div>
         <div>
-            <input id="estudio" type="text" placeholder="Estudio">
+            <input id="release_date" name="release_date" type="date" placeholder="Fecha de Estreno">
+        </div>
+        <label for="Genre">Género</label>
+        <select name="genre_id">
+            <% for (let i=0; i < genres.length; i++) { %>
+                <option value="<%= genres[i].id %>">
+                    <%= genres[i].name %>
+                </option>
+                <% } %>
+        </select>
+        <div>
+            <input type="submit" value="Agregar">
         </div>
     </form>
 </body>
+
 </html>

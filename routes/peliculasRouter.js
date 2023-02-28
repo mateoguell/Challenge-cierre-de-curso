@@ -6,9 +6,11 @@ const peliculasController = require('../controllers/peliculasController');
 
 router.get('/', peliculasController.index);
 router.get('/peliculasD/:id?', peliculasController.peliculasD);
-router.get('/createP', peliculasController.createP);
-router.get('/editP', peliculasController.editP);
+router.get('/createP/:id?', peliculasController.add);
+router.get('/peliculasD/editP/:id?', peliculasController.editP);
 
 
+router.post('/createP', peliculasController.create);
+router.post('/peliculas/editP', peliculasController.update);
 
 module.exports = router;
