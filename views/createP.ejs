@@ -17,18 +17,18 @@
             <input id="title" name="title" type="text" placeholder="Título">
         </div>
         <div>
-            <input id="rating" name="rating" type="number" placeholder="Puntaje" min="1" max="10">
+            <input id="rating" name="rating" type="number" placeholder="Puntaje">
         </div>
         <div>
             <input id="length" name="length" type="number" placeholder="Duración">
         </div>
         <div>
-            <input id="awards" name="awards" type="text" placeholder="Premios">
+            <input id="awards" name="awards" type="number" placeholder="Premios">
         </div>
         <div>
             <input id="release_date" name="release_date" type="date" placeholder="Fecha de Estreno">
         </div>
-        <label for="Genre">Género</label>
+        <label for="Genre"></label>
         <select name="genre_id">
             <% for (let i=0; i < genres.length; i++) { %>
                 <option value="<%= genres[i].id %>">
@@ -38,6 +38,9 @@
         </select>
         <div>
             <input type="submit" value="Agregar">
+        </div>
+        <div>
+            <button><a href="/">Volver</a></button>
         </div>
     </form>
 </body>

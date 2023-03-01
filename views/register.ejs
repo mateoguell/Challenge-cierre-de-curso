@@ -1,50 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <header></header>
-    <main>               
+    <main>
+        <div>
+            <h1>Registrate</h1>
+        </div>
+        <div>
+            <form action="/login" method="POST" enctype="multipart/form-data">
                 <div>
-                    <h1>Registrate</h1>
+                    <input type="file" name="imagen" id="imagen">
+                    <label for="imagen"> Adjunte una imagen </label>
                 </div>
-                <div>               
-                    <form action = "/login" method="POST" enctype="multipart/form-data">
-                        <div>
-                            <input type="file" name="imagen" id="imagen">
-					        <label for="imagen"> Adjunte una imagen </label>
-                        </div>
-                        <div>                   
-                            <input type="text" name="firstname" id="firstname" placeholder= "Nombre" size="15" > 
-                        </div>  
-                        <div>                      
-                           <input type="text" name="lastname" id="lastname" placeholder= "Apellido" size="15" >
-                        </div>
-                        <div>                   
-                            <input type="text" name="username" id="username" placeholder= "Nombre de usuario" size="15" > 
-                        </div>    
-                        <div>                             
-                            <input type="text" name="password" id="password" placeholder= "Contraseña" size="15" >                         
-                        </div>
-                        <div>                           
-                            <input type="text" name="password" id="password" placeholder= "Repite la contraseña" size="15" > 
-                        </div>         
-                        <div>                          
-                            <input type="email" name="email" id="email" placeholder= "E-mail" size="15" >                        
-                        </div>                    
-                            
-                            <div><input type="submit" value="Continuar"></input> </div>
-                            <div>
-                                <label> Ya tenes cuenta </label>
-                                <a href="/login">Iniciar Sesion</a>
-                            </div>
-                    </form>
+                <div>
+                    <input type="text" name="firstname" id="firstname" placeholder="Nombre" size="15">
                 </div>
+                <div>
+                    <input type="text" name="lastname" id="lastname" placeholder="Apellido" size="15">
+                </div>
+                <div>
+                    <input type="text" name="username" id="username" placeholder="Nombre de usuario" size="15">
+                </div>
+                <div>
+                    <input type="text" name="password" id="password" placeholder="Contraseña" size="15">
+                </div>
+                <div>
+                    <input type="text" name="password" id="password" placeholder="Repite la contraseña" size="15">
+                </div>
+                <div>
+                    <input type="email" name="email" id="email" placeholder="E-mail" size="15">
+                </div>
+
+                <div><input type="submit" value="Continuar"></input> </div>
+                <div>
+                    <label> Ya tenes cuenta </label>
+                    <a href="/user/login">Iniciar Sesion</a>
+                </div>
+            </form>
+            <div>
+                <button><a href="/">Inicio</a></button>
+            </div>
+
+        </div>
     </main>
     <footer></footer>
 </body>
+
 </html>

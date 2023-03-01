@@ -12,36 +12,39 @@
     <div>
         <h1>Editar peliculas</h1>
     </div>
-    <form action="/" method="POST">
+    <form action="/peliculasD/editP/<%= movie.id %>" method="POST">
         <div>
-            <input id="title" value="<%= movie.title %>" type="text">
+            <input id="title" name="title" value="<%= movie.title %>" type="text" placeholder="Titulo">
         </div>
 
         <div>
-            <input id="rating" value="<%= movie.rating %>" type="number">
+            <input id="rating" name="rating" value="<%= movie.rating %>" type="number" placeholder="Puntaje">
         </div>
         <div>
-            <input id="awards" value="<%= movie.awards %>" type="text">
+            <input id="awards" name="awards" value="<%= movie.awards %>" type="number" placeholder="Premios">
         </div>
         <div>
-            <input id="length" value="<%= movie.length ? movie.length : 0 %>" type="text">
+            <input id="length" name="length" value="<%= movie.length %>" type="number" placeholder="Duración">
         </div>
         <div>
-            <input id="release_date" value="<%= movie.release_date %>" type="text">
+            <input id="release_date" name="release_date" value="<%= movie.release_date %>" type="date"
+                placeholder="Fecha de Estreno">
         </div>
-        <div>
-            <input id="genre" value="<%= movie.genres?.name %>" type="text">
-        </div>
-        <div>
-            <input id="actor" value="<%= movie.actor?.first_name %>" type="text">
-        </div>
+        <label for="Genre"></label>
+        <select name="genre_id">
+            <% for (let i=0; i < genres.length; i++) { %>
+                <option value="<%= genres[i].id %>">
+                    <%= genres[i].name %>
+                </option>
+                <% } %>
+        </select>
         <div>
             <input type="submit" value="Editar">
         </div>
-        <div>
-            <button><a href="/peliculasD/<%= movie.id %>">Volver</a></button>
-        </div>
     </form>
+    <div>
+        <button><a href="/peliculasD/<%= movie.id %>">Volver</a></button>
+    </div>
 </body>
 
 </html>
