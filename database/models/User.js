@@ -18,10 +18,10 @@ module.exports = (Sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: false
         },
-        remember_token: {
-            type: DataTypes.STRING,
-            allowNull: false
-        },
+        // remember_token: {
+        //     type: DataTypes.STRING,
+        //     allowNull: false
+        // },
         rol: {
             type: DataTypes.INTEGER,
             allowNull: false

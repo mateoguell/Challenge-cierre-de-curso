@@ -15,25 +15,12 @@
             <h1>Registrate</h1>
         </div>
         <div>
-            <form action="/login" method="POST" enctype="multipart/form-data">
+            <form action="/login/register" method="POST" enctype="multipart/form-data">
                 <div>
-                    <input type="file" name="imagen" id="imagen">
-                    <label for="imagen"> Adjunte una imagen </label>
+                    <input type="text" name="name" id="name" placeholder="Nombre" size="15">
                 </div>
                 <div>
-                    <input type="text" name="firstname" id="firstname" placeholder="Nombre" size="15">
-                </div>
-                <div>
-                    <input type="text" name="lastname" id="lastname" placeholder="Apellido" size="15">
-                </div>
-                <div>
-                    <input type="text" name="username" id="username" placeholder="Nombre de usuario" size="15">
-                </div>
-                <div>
-                    <input type="text" name="password" id="password" placeholder="Contraseña" size="15">
-                </div>
-                <div>
-                    <input type="text" name="password" id="password" placeholder="Repite la contraseña" size="15">
+                    <input type="password" name="password" id="password" placeholder="Contraseña" size="15">
                 </div>
                 <div>
                     <input type="email" name="email" id="email" placeholder="E-mail" size="15">
@@ -42,7 +29,7 @@
                 <div><input type="submit" value="Continuar"></input> </div>
                 <div>
                     <label> Ya tenes cuenta </label>
-                    <a href="/user/login">Iniciar Sesion</a>
+                    <a href="/login">Iniciar Sesion</a>
                 </div>
             </form>
             <div>

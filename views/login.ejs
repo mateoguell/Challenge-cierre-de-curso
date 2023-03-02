@@ -11,17 +11,19 @@
 <body>
     <header></header>
     <main>
-        <form action="/" method="POST">
+        <form action="/login" method="POST">
             <div>
-                <input id="Email" type="email" placeholder="Ingrese Email">
+                <input id="username" name="username" type="username" placeholder="Ingrese nombre de usuario">
             </div>
             <div>
-                <input id="contraseña" type="password" placeholder="Ingrese contraseña">
+                <input id="password" name="password" type="password" placeholder="Ingrese contraseña">
             </div>
-            <div><input type="submit" value="Continuar"></div>
+            <div>
+                <input type="submit" value="Continuar">
+            </div>
             <div>
                 <label> No tenes cuenta? </label>
-                <a href="/user/register">Crear cuenta</a>
+                <a href="/login/register">Crear cuenta</a>
             </div>
 
         </form>
